@@ -13,5 +13,3 @@ node('DockerBI'){
 		}
 	}
 }
-
-
