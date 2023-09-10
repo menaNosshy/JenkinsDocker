@@ -9,7 +9,7 @@ node('DockerBI')
 
     stage('Build')
     {
-        dockerImage = docker.build('mnyaqoub/agent-dnc:v' + env.BUILD_NUMBER, './dotnetcore');
+        dockerImage = docker.build('mnyaqoub/agent-dnc:v' + env.BUILD_NUMBER, './Dotnetcore');
     }
 
     stage('Push')
