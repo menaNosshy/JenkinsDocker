@@ -7,7 +7,7 @@ node('Dotnetcore')
 
     stage('Build')
     {
-        sh 'dotnet build'
+        sh 'dotnet build ConsoleApp1'
     }
 
     stage('Test')
