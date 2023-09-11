@@ -2,7 +2,7 @@ node('Dotnetcore')
 {
     stage('SCM')
     {
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/menaNosshy/dotnetwebapp.git']]]);
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/menaNosshy/JenkinsDocker.git']]]);
     }
 
     stage('Build')
@@ -27,6 +27,6 @@ node('Dotnetcore')
 
     stage('Archive')
     {
-        archiveArtifacts artifacts: 'dotnetwebapp/*.*'
+        archiveArtifacts artifacts: 'ConsoleApp1/*.*'
     }
 }
