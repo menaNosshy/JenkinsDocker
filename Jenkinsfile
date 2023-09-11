@@ -7,7 +7,14 @@ node('Dotnetcore')
 
     stage('Build')
     {
-        sh 'dotnet build ConsoleApp1'
+        try
+        {
+            sh 'dotnet build ConsoleApp1'
+        }
+        finally
+        {
+            archiveArtifacts artifacts: 'ConsoleApp1/*/*.*'
+        }
     }
 
     stage('Test')
