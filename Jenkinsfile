@@ -27,6 +27,6 @@ node('Dotnetcore')
 
     stage('Archive')
     {
-        archiveArtifacts artifacts: 'ConsoleApp1/*.*'
+        archiveArtifacts artifacts: 'ConsoleApp1/*/*.*'
     }
 }
